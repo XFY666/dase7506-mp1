@@ -1,0 +1,780 @@
+{
+  "schema": "7506-resource-summary-v1",
+  "protocol": "7506-mp1-wt2-v2",
+  "split": "validation",
+  "test_evaluated": false,
+  "precision": "fp32",
+  "device": "cpu",
+  "baseline_checkpoint_sha256": "1ed624aaac94411664e8168c4bf8d852d167ab19ccba62155e3a08dd3ea36def",
+  "candidate_checkpoint_sha256": "0ccd91e76520f7b83a1aee05584d88007708ca6b33e15f9f9e1586335affd7ee",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "python_executable": "E:\\Edge\\mp1\\py\\Scripts\\python.exe",
+    "torch_version": "2.7.1+cpu",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 4
+  },
+  "source_sha256": {
+    "student.py": "501b26e1487327f7b5c23be206402f1bfcb5d1b9d814090fb33e1cbc934fa9c2",
+    "hybrid.py": "17c14a19b0f83ad01b951174feb198e0de2efc461316ea32ebf5c4b528974127",
+    "ngram_expert.py": "bdc78822d0f05644b209d5f55e7aac72a8d25df1424f88d067ad7e6df180c9f1",
+    "common.py": "d40dc1fe6578b5993a563bdb4d9e5317ddc9fae8afe48822b66571c7042e84db",
+    "evaluate.py": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+    "model.py": "6cce142a31d396f017319543f50d70f30fa6da740729af01c8baed13c6f671f9"
+  },
+  "benchmark_sha256": {
+    "data/manifest.json": "f4790bb599d9fcd04e48263e685335e2f62d9bca0324b08061a10c38984f4fe4",
+    "data/tokenizer.json": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+    "data/wikitext_train.txt": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+    "data/wikitext_validation.txt": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+    "data/wikitext_test.txt": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc"
+  },
+  "measurement_source_sha256": {
+    "measure_evaluation.py": "dbd79dbe6c29c2436cb26ca2a09d9bf1057a078df427f1ea27626d649d97201a",
+    "evidence.py": "861aba6c57ee444c975991dafd4049da03745d286cd6b9f05919069077cc25ba"
+  },
+  "baseline_seconds": [
+    6.175773599999957,
+    5.411407300009159,
+    5.425110800002585
+  ],
+  "candidate_seconds": [
+    23.03356199999689,
+    23.17403199999535,
+    23.084964300011052
+  ],
+  "baseline_median_seconds": 5.425110800002585,
+  "candidate_median_seconds": 23.084964300011052,
+  "median_time_ratio": 4.2552060503538565,
+  "time_ratio_limit": 5.0,
+  "time_within_limit": true,
+  "candidate_bpb": [
+    1.415455287338549,
+    1.415455287338549,
+    1.415455287338549
+  ],
+  "candidate_peak_rss_bytes": 1796526080,
+  "ram_limit_bytes": 4294967296,
+  "ram_within_limit": true,
+  "candidate_peak_concurrent_rss_bytes": 1778016256,
+  "source_stability_verified": true,
+  "memory_measurement_valid": true,
+  "baseline_runs": [
+    {
+      "protocol": "7506-mp1-wt2-v2",
+      "command": [
+        "E:\\Edge\\mp1\\py\\Scripts\\python.exe",
+        "E:\\Edge\\mp1\\release\\evaluate.py",
+        "--checkpoint",
+        "E:\\Edge\\mp1\\release\\checkpoints\\baseline\\checkpoint.pt",
+        "--split",
+        "validation",
+        "--device",
+        "cpu",
+        "--precision",
+        "fp32",
+        "--threads",
+        "4",
+        "--output",
+        "E:\\Edge\\mp1\\measure\\session-1\\repeat1_baseline.score.json"
+      ],
+      "return_code": 0,
+      "wall_seconds": 15.195582600004855,
+      "peak_rss_bytes": 1684795392,
+      "peak_private_commit_bytes": 2294423552,
+      "ram_limit_bytes": 4294967296,
+      "peak_concurrent_rss_bytes": 1679716352,
+      "peak_concurrent_private_commit_bytes": 2294374400,
+      "sum_observed_process_rss_peaks_bytes": 1684795392,
+      "sum_observed_process_commit_peaks_bytes": 2294423552,
+      "ram_within_limit": true,
+      "memory_measurement_valid": true,
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "machine": "AMD64",
+      "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+      "python_executable": "E:\\Edge\\mp1\\py\\Scripts\\python.exe",
+      "torch_version": "2.7.1+cpu",
+      "threads": 4,
+      "source_stability_verified": true,
+      "checkpoint_sha256": "1ed624aaac94411664e8168c4bf8d852d167ab19ccba62155e3a08dd3ea36def",
+      "source_sha256": {
+        "student.py": "501b26e1487327f7b5c23be206402f1bfcb5d1b9d814090fb33e1cbc934fa9c2",
+        "hybrid.py": "17c14a19b0f83ad01b951174feb198e0de2efc461316ea32ebf5c4b528974127",
+        "ngram_expert.py": "bdc78822d0f05644b209d5f55e7aac72a8d25df1424f88d067ad7e6df180c9f1",
+        "common.py": "d40dc1fe6578b5993a563bdb4d9e5317ddc9fae8afe48822b66571c7042e84db",
+        "evaluate.py": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+        "model.py": "6cce142a31d396f017319543f50d70f30fa6da740729af01c8baed13c6f671f9"
+      },
+      "benchmark_sha256": {
+        "data/manifest.json": "f4790bb599d9fcd04e48263e685335e2f62d9bca0324b08061a10c38984f4fe4",
+        "data/tokenizer.json": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+        "data/wikitext_train.txt": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+        "data/wikitext_validation.txt": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+        "data/wikitext_test.txt": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc"
+      },
+      "end_snapshot": {
+        "checkpoint_sha256": "1ed624aaac94411664e8168c4bf8d852d167ab19ccba62155e3a08dd3ea36def",
+        "source_sha256": {
+          "student.py": "501b26e1487327f7b5c23be206402f1bfcb5d1b9d814090fb33e1cbc934fa9c2",
+          "hybrid.py": "17c14a19b0f83ad01b951174feb198e0de2efc461316ea32ebf5c4b528974127",
+          "ngram_expert.py": "bdc78822d0f05644b209d5f55e7aac72a8d25df1424f88d067ad7e6df180c9f1",
+          "common.py": "d40dc1fe6578b5993a563bdb4d9e5317ddc9fae8afe48822b66571c7042e84db",
+          "evaluate.py": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+          "model.py": "6cce142a31d396f017319543f50d70f30fa6da740729af01c8baed13c6f671f9"
+        },
+        "benchmark_sha256": {
+          "data/manifest.json": "f4790bb599d9fcd04e48263e685335e2f62d9bca0324b08061a10c38984f4fe4",
+          "data/tokenizer.json": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+          "data/wikitext_train.txt": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+          "data/wikitext_validation.txt": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+          "data/wikitext_test.txt": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc"
+        }
+      },
+      "measurement_source_sha256": {
+        "measure_evaluation.py": "dbd79dbe6c29c2436cb26ca2a09d9bf1057a078df427f1ea27626d649d97201a",
+        "evidence.py": "861aba6c57ee444c975991dafd4049da03745d286cd6b9f05919069077cc25ba"
+      },
+      "psutil_version": "7.2.2",
+      "sample_interval_seconds": 0.02,
+      "memory_method": "Entire evaluation process tree; per-process OS lifetime peaks when available, plus sampled concurrent RSS",
+      "memory_polling_limitations": "20 ms snapshots may miss short-lived descendants. OS lifetime peaks are retained for observed processes when available. The sum of individual peaks may exceed the simultaneous peak.",
+      "process_peaks": [
+        {
+          "pid": 26012,
+          "name": "python.exe",
+          "peak_rss_bytes": 4423680,
+          "peak_private_commit_bytes": 819200
+        },
+        {
+          "pid": 3624,
+          "name": "python.exe",
+          "peak_rss_bytes": 1680371712,
+          "peak_private_commit_bytes": 2293604352
+        }
+      ],
+      "score_output": "E:\\Edge\\mp1\\measure\\session-1\\repeat1_baseline.score.json",
+      "score": {
+        "bpb": 2.0710808852260496,
+        "token_ppl": 79.52779834090688,
+        "nll_nats": 1648037.378946459,
+        "targets": 376599,
+        "utf8_bytes": 1148007,
+        "seconds": 6.175773599999957,
+        "protocol": "7506-mp1-wt2-v2",
+        "split": "validation",
+        "precision": "fp32",
+        "checkpoint_sha256": "1ed624aaac94411664e8168c4bf8d852d167ab19ccba62155e3a08dd3ea36def",
+        "implementation_sha256": "6cce142a31d396f017319543f50d70f30fa6da740729af01c8baed13c6f671f9",
+        "evaluator_sha256": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+        "tokenizer_sha256": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+        "device": "cpu",
+        "device_name": "CPU",
+        "peak_allocated_gb": 0.0,
+        "peak_reserved_gb": 0.0
+      }
+    },
+    {
+      "protocol": "7506-mp1-wt2-v2",
+      "command": [
+        "E:\\Edge\\mp1\\py\\Scripts\\python.exe",
+        "E:\\Edge\\mp1\\release\\evaluate.py",
+        "--checkpoint",
+        "E:\\Edge\\mp1\\release\\checkpoints\\baseline\\checkpoint.pt",
+        "--split",
+        "validation",
+        "--device",
+        "cpu",
+        "--precision",
+        "fp32",
+        "--threads",
+        "4",
+        "--output",
+        "E:\\Edge\\mp1\\measure\\session-1\\repeat2_baseline.score.json"
+      ],
+      "return_code": 0,
+      "wall_seconds": 13.056245299987495,
+      "peak_rss_bytes": 1684492288,
+      "peak_private_commit_bytes": 2293874688,
+      "ram_limit_bytes": 4294967296,
+      "peak_concurrent_rss_bytes": 1660538880,
+      "peak_concurrent_private_commit_bytes": 2293858304,
+      "sum_observed_process_rss_peaks_bytes": 1684492288,
+      "sum_observed_process_commit_peaks_bytes": 2293874688,
+      "ram_within_limit": true,
+      "memory_measurement_valid": true,
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "machine": "AMD64",
+      "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+      "python_executable": "E:\\Edge\\mp1\\py\\Scripts\\python.exe",
+      "torch_version": "2.7.1+cpu",
+      "threads": 4,
+      "source_stability_verified": true,
+      "checkpoint_sha256": "1ed624aaac94411664e8168c4bf8d852d167ab19ccba62155e3a08dd3ea36def",
+      "source_sha256": {
+        "student.py": "501b26e1487327f7b5c23be206402f1bfcb5d1b9d814090fb33e1cbc934fa9c2",
+        "hybrid.py": "17c14a19b0f83ad01b951174feb198e0de2efc461316ea32ebf5c4b528974127",
+        "ngram_expert.py": "bdc78822d0f05644b209d5f55e7aac72a8d25df1424f88d067ad7e6df180c9f1",
+        "common.py": "d40dc1fe6578b5993a563bdb4d9e5317ddc9fae8afe48822b66571c7042e84db",
+        "evaluate.py": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+        "model.py": "6cce142a31d396f017319543f50d70f30fa6da740729af01c8baed13c6f671f9"
+      },
+      "benchmark_sha256": {
+        "data/manifest.json": "f4790bb599d9fcd04e48263e685335e2f62d9bca0324b08061a10c38984f4fe4",
+        "data/tokenizer.json": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+        "data/wikitext_train.txt": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+        "data/wikitext_validation.txt": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+        "data/wikitext_test.txt": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc"
+      },
+      "end_snapshot": {
+        "checkpoint_sha256": "1ed624aaac94411664e8168c4bf8d852d167ab19ccba62155e3a08dd3ea36def",
+        "source_sha256": {
+          "student.py": "501b26e1487327f7b5c23be206402f1bfcb5d1b9d814090fb33e1cbc934fa9c2",
+          "hybrid.py": "17c14a19b0f83ad01b951174feb198e0de2efc461316ea32ebf5c4b528974127",
+          "ngram_expert.py": "bdc78822d0f05644b209d5f55e7aac72a8d25df1424f88d067ad7e6df180c9f1",
+          "common.py": "d40dc1fe6578b5993a563bdb4d9e5317ddc9fae8afe48822b66571c7042e84db",
+          "evaluate.py": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+          "model.py": "6cce142a31d396f017319543f50d70f30fa6da740729af01c8baed13c6f671f9"
+        },
+        "benchmark_sha256": {
+          "data/manifest.json": "f4790bb599d9fcd04e48263e685335e2f62d9bca0324b08061a10c38984f4fe4",
+          "data/tokenizer.json": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+          "data/wikitext_train.txt": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+          "data/wikitext_validation.txt": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+          "data/wikitext_test.txt": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc"
+        }
+      },
+      "measurement_source_sha256": {
+        "measure_evaluation.py": "dbd79dbe6c29c2436cb26ca2a09d9bf1057a078df427f1ea27626d649d97201a",
+        "evidence.py": "861aba6c57ee444c975991dafd4049da03745d286cd6b9f05919069077cc25ba"
+      },
+      "psutil_version": "7.2.2",
+      "sample_interval_seconds": 0.02,
+      "memory_method": "Entire evaluation process tree; per-process OS lifetime peaks when available, plus sampled concurrent RSS",
+      "memory_polling_limitations": "20 ms snapshots may miss short-lived descendants. OS lifetime peaks are retained for observed processes when available. The sum of individual peaks may exceed the simultaneous peak.",
+      "process_peaks": [
+        {
+          "pid": 20892,
+          "name": "python.exe",
+          "peak_rss_bytes": 4448256,
+          "peak_private_commit_bytes": 815104
+        },
+        {
+          "pid": 7280,
+          "name": "python.exe",
+          "peak_rss_bytes": 1680044032,
+          "peak_private_commit_bytes": 2293059584
+        }
+      ],
+      "score_output": "E:\\Edge\\mp1\\measure\\session-1\\repeat2_baseline.score.json",
+      "score": {
+        "bpb": 2.0710808852260496,
+        "token_ppl": 79.52779834090688,
+        "nll_nats": 1648037.378946459,
+        "targets": 376599,
+        "utf8_bytes": 1148007,
+        "seconds": 5.411407300009159,
+        "protocol": "7506-mp1-wt2-v2",
+        "split": "validation",
+        "precision": "fp32",
+        "checkpoint_sha256": "1ed624aaac94411664e8168c4bf8d852d167ab19ccba62155e3a08dd3ea36def",
+        "implementation_sha256": "6cce142a31d396f017319543f50d70f30fa6da740729af01c8baed13c6f671f9",
+        "evaluator_sha256": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+        "tokenizer_sha256": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+        "device": "cpu",
+        "device_name": "CPU",
+        "peak_allocated_gb": 0.0,
+        "peak_reserved_gb": 0.0
+      }
+    },
+    {
+      "protocol": "7506-mp1-wt2-v2",
+      "command": [
+        "E:\\Edge\\mp1\\py\\Scripts\\python.exe",
+        "E:\\Edge\\mp1\\release\\evaluate.py",
+        "--checkpoint",
+        "E:\\Edge\\mp1\\release\\checkpoints\\baseline\\checkpoint.pt",
+        "--split",
+        "validation",
+        "--device",
+        "cpu",
+        "--precision",
+        "fp32",
+        "--threads",
+        "4",
+        "--output",
+        "E:\\Edge\\mp1\\measure\\session-1\\repeat3_baseline.score.json"
+      ],
+      "return_code": 0,
+      "wall_seconds": 13.050554999994347,
+      "peak_rss_bytes": 1685434368,
+      "peak_private_commit_bytes": 2294984704,
+      "ram_limit_bytes": 4294967296,
+      "peak_concurrent_rss_bytes": 1671856128,
+      "peak_concurrent_private_commit_bytes": 2294935552,
+      "sum_observed_process_rss_peaks_bytes": 1685434368,
+      "sum_observed_process_commit_peaks_bytes": 2294984704,
+      "ram_within_limit": true,
+      "memory_measurement_valid": true,
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "machine": "AMD64",
+      "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+      "python_executable": "E:\\Edge\\mp1\\py\\Scripts\\python.exe",
+      "torch_version": "2.7.1+cpu",
+      "threads": 4,
+      "source_stability_verified": true,
+      "checkpoint_sha256": "1ed624aaac94411664e8168c4bf8d852d167ab19ccba62155e3a08dd3ea36def",
+      "source_sha256": {
+        "student.py": "501b26e1487327f7b5c23be206402f1bfcb5d1b9d814090fb33e1cbc934fa9c2",
+        "hybrid.py": "17c14a19b0f83ad01b951174feb198e0de2efc461316ea32ebf5c4b528974127",
+        "ngram_expert.py": "bdc78822d0f05644b209d5f55e7aac72a8d25df1424f88d067ad7e6df180c9f1",
+        "common.py": "d40dc1fe6578b5993a563bdb4d9e5317ddc9fae8afe48822b66571c7042e84db",
+        "evaluate.py": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+        "model.py": "6cce142a31d396f017319543f50d70f30fa6da740729af01c8baed13c6f671f9"
+      },
+      "benchmark_sha256": {
+        "data/manifest.json": "f4790bb599d9fcd04e48263e685335e2f62d9bca0324b08061a10c38984f4fe4",
+        "data/tokenizer.json": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+        "data/wikitext_train.txt": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+        "data/wikitext_validation.txt": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+        "data/wikitext_test.txt": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc"
+      },
+      "end_snapshot": {
+        "checkpoint_sha256": "1ed624aaac94411664e8168c4bf8d852d167ab19ccba62155e3a08dd3ea36def",
+        "source_sha256": {
+          "student.py": "501b26e1487327f7b5c23be206402f1bfcb5d1b9d814090fb33e1cbc934fa9c2",
+          "hybrid.py": "17c14a19b0f83ad01b951174feb198e0de2efc461316ea32ebf5c4b528974127",
+          "ngram_expert.py": "bdc78822d0f05644b209d5f55e7aac72a8d25df1424f88d067ad7e6df180c9f1",
+          "common.py": "d40dc1fe6578b5993a563bdb4d9e5317ddc9fae8afe48822b66571c7042e84db",
+          "evaluate.py": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+          "model.py": "6cce142a31d396f017319543f50d70f30fa6da740729af01c8baed13c6f671f9"
+        },
+        "benchmark_sha256": {
+          "data/manifest.json": "f4790bb599d9fcd04e48263e685335e2f62d9bca0324b08061a10c38984f4fe4",
+          "data/tokenizer.json": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+          "data/wikitext_train.txt": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+          "data/wikitext_validation.txt": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+          "data/wikitext_test.txt": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc"
+        }
+      },
+      "measurement_source_sha256": {
+        "measure_evaluation.py": "dbd79dbe6c29c2436cb26ca2a09d9bf1057a078df427f1ea27626d649d97201a",
+        "evidence.py": "861aba6c57ee444c975991dafd4049da03745d286cd6b9f05919069077cc25ba"
+      },
+      "psutil_version": "7.2.2",
+      "sample_interval_seconds": 0.02,
+      "memory_method": "Entire evaluation process tree; per-process OS lifetime peaks when available, plus sampled concurrent RSS",
+      "memory_polling_limitations": "20 ms snapshots may miss short-lived descendants. OS lifetime peaks are retained for observed processes when available. The sum of individual peaks may exceed the simultaneous peak.",
+      "process_peaks": [
+        {
+          "pid": 16228,
+          "name": "python.exe",
+          "peak_rss_bytes": 4444160,
+          "peak_private_commit_bytes": 806912
+        },
+        {
+          "pid": 6608,
+          "name": "python.exe",
+          "peak_rss_bytes": 1680990208,
+          "peak_private_commit_bytes": 2294177792
+        }
+      ],
+      "score_output": "E:\\Edge\\mp1\\measure\\session-1\\repeat3_baseline.score.json",
+      "score": {
+        "bpb": 2.0710808852260496,
+        "token_ppl": 79.52779834090688,
+        "nll_nats": 1648037.378946459,
+        "targets": 376599,
+        "utf8_bytes": 1148007,
+        "seconds": 5.425110800002585,
+        "protocol": "7506-mp1-wt2-v2",
+        "split": "validation",
+        "precision": "fp32",
+        "checkpoint_sha256": "1ed624aaac94411664e8168c4bf8d852d167ab19ccba62155e3a08dd3ea36def",
+        "implementation_sha256": "6cce142a31d396f017319543f50d70f30fa6da740729af01c8baed13c6f671f9",
+        "evaluator_sha256": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+        "tokenizer_sha256": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+        "device": "cpu",
+        "device_name": "CPU",
+        "peak_allocated_gb": 0.0,
+        "peak_reserved_gb": 0.0
+      }
+    }
+  ],
+  "candidate_runs": [
+    {
+      "protocol": "7506-mp1-wt2-v2",
+      "command": [
+        "E:\\Edge\\mp1\\py\\Scripts\\python.exe",
+        "E:\\Edge\\mp1\\release\\evaluate.py",
+        "--checkpoint",
+        "E:\\Edge\\mp1\\work\\candidate\\checkpoint.pt",
+        "--split",
+        "validation",
+        "--device",
+        "cpu",
+        "--precision",
+        "fp32",
+        "--threads",
+        "4",
+        "--output",
+        "E:\\Edge\\mp1\\measure\\session-1\\repeat1_candidate.score.json"
+      ],
+      "return_code": 0,
+      "wall_seconds": 30.968926600005943,
+      "peak_rss_bytes": 1796198400,
+      "peak_private_commit_bytes": 2430787584,
+      "ram_limit_bytes": 4294967296,
+      "peak_concurrent_rss_bytes": 1761075200,
+      "peak_concurrent_private_commit_bytes": 2430750720,
+      "sum_observed_process_rss_peaks_bytes": 1796198400,
+      "sum_observed_process_commit_peaks_bytes": 2430787584,
+      "ram_within_limit": true,
+      "memory_measurement_valid": true,
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "machine": "AMD64",
+      "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+      "python_executable": "E:\\Edge\\mp1\\py\\Scripts\\python.exe",
+      "torch_version": "2.7.1+cpu",
+      "threads": 4,
+      "source_stability_verified": true,
+      "checkpoint_sha256": "0ccd91e76520f7b83a1aee05584d88007708ca6b33e15f9f9e1586335affd7ee",
+      "source_sha256": {
+        "student.py": "501b26e1487327f7b5c23be206402f1bfcb5d1b9d814090fb33e1cbc934fa9c2",
+        "hybrid.py": "17c14a19b0f83ad01b951174feb198e0de2efc461316ea32ebf5c4b528974127",
+        "ngram_expert.py": "bdc78822d0f05644b209d5f55e7aac72a8d25df1424f88d067ad7e6df180c9f1",
+        "common.py": "d40dc1fe6578b5993a563bdb4d9e5317ddc9fae8afe48822b66571c7042e84db",
+        "evaluate.py": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+        "model.py": "6cce142a31d396f017319543f50d70f30fa6da740729af01c8baed13c6f671f9"
+      },
+      "benchmark_sha256": {
+        "data/manifest.json": "f4790bb599d9fcd04e48263e685335e2f62d9bca0324b08061a10c38984f4fe4",
+        "data/tokenizer.json": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+        "data/wikitext_train.txt": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+        "data/wikitext_validation.txt": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+        "data/wikitext_test.txt": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc"
+      },
+      "end_snapshot": {
+        "checkpoint_sha256": "0ccd91e76520f7b83a1aee05584d88007708ca6b33e15f9f9e1586335affd7ee",
+        "source_sha256": {
+          "student.py": "501b26e1487327f7b5c23be206402f1bfcb5d1b9d814090fb33e1cbc934fa9c2",
+          "hybrid.py": "17c14a19b0f83ad01b951174feb198e0de2efc461316ea32ebf5c4b528974127",
+          "ngram_expert.py": "bdc78822d0f05644b209d5f55e7aac72a8d25df1424f88d067ad7e6df180c9f1",
+          "common.py": "d40dc1fe6578b5993a563bdb4d9e5317ddc9fae8afe48822b66571c7042e84db",
+          "evaluate.py": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+          "model.py": "6cce142a31d396f017319543f50d70f30fa6da740729af01c8baed13c6f671f9"
+        },
+        "benchmark_sha256": {
+          "data/manifest.json": "f4790bb599d9fcd04e48263e685335e2f62d9bca0324b08061a10c38984f4fe4",
+          "data/tokenizer.json": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+          "data/wikitext_train.txt": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+          "data/wikitext_validation.txt": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+          "data/wikitext_test.txt": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc"
+        }
+      },
+      "measurement_source_sha256": {
+        "measure_evaluation.py": "dbd79dbe6c29c2436cb26ca2a09d9bf1057a078df427f1ea27626d649d97201a",
+        "evidence.py": "861aba6c57ee444c975991dafd4049da03745d286cd6b9f05919069077cc25ba"
+      },
+      "psutil_version": "7.2.2",
+      "sample_interval_seconds": 0.02,
+      "memory_method": "Entire evaluation process tree; per-process OS lifetime peaks when available, plus sampled concurrent RSS",
+      "memory_polling_limitations": "20 ms snapshots may miss short-lived descendants. OS lifetime peaks are retained for observed processes when available. The sum of individual peaks may exceed the simultaneous peak.",
+      "process_peaks": [
+        {
+          "pid": 22728,
+          "name": "python.exe",
+          "peak_rss_bytes": 4444160,
+          "peak_private_commit_bytes": 819200
+        },
+        {
+          "pid": 25740,
+          "name": "python.exe",
+          "peak_rss_bytes": 1791754240,
+          "peak_private_commit_bytes": 2429968384
+        }
+      ],
+      "score_output": "E:\\Edge\\mp1\\measure\\session-1\\repeat1_candidate.score.json",
+      "score": {
+        "bpb": 1.415455287338549,
+        "token_ppl": 19.901545023254567,
+        "nll_nats": 1126331.2980201265,
+        "targets": 376599,
+        "utf8_bytes": 1148007,
+        "seconds": 23.03356199999689,
+        "protocol": "7506-mp1-wt2-v2",
+        "split": "validation",
+        "precision": "fp32",
+        "checkpoint_sha256": "0ccd91e76520f7b83a1aee05584d88007708ca6b33e15f9f9e1586335affd7ee",
+        "implementation_sha256": "17c14a19b0f83ad01b951174feb198e0de2efc461316ea32ebf5c4b528974127",
+        "evaluator_sha256": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+        "tokenizer_sha256": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+        "device": "cpu",
+        "device_name": "CPU",
+        "peak_allocated_gb": 0.0,
+        "peak_reserved_gb": 0.0
+      }
+    },
+    {
+      "protocol": "7506-mp1-wt2-v2",
+      "command": [
+        "E:\\Edge\\mp1\\py\\Scripts\\python.exe",
+        "E:\\Edge\\mp1\\release\\evaluate.py",
+        "--checkpoint",
+        "E:\\Edge\\mp1\\work\\candidate\\checkpoint.pt",
+        "--split",
+        "validation",
+        "--device",
+        "cpu",
+        "--precision",
+        "fp32",
+        "--threads",
+        "4",
+        "--output",
+        "E:\\Edge\\mp1\\measure\\session-1\\repeat2_candidate.score.json"
+      ],
+      "return_code": 0,
+      "wall_seconds": 30.947565400012536,
+      "peak_rss_bytes": 1796526080,
+      "peak_private_commit_bytes": 2430509056,
+      "ram_limit_bytes": 4294967296,
+      "peak_concurrent_rss_bytes": 1766395904,
+      "peak_concurrent_private_commit_bytes": 2430464000,
+      "sum_observed_process_rss_peaks_bytes": 1796526080,
+      "sum_observed_process_commit_peaks_bytes": 2430509056,
+      "ram_within_limit": true,
+      "memory_measurement_valid": true,
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "machine": "AMD64",
+      "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+      "python_executable": "E:\\Edge\\mp1\\py\\Scripts\\python.exe",
+      "torch_version": "2.7.1+cpu",
+      "threads": 4,
+      "source_stability_verified": true,
+      "checkpoint_sha256": "0ccd91e76520f7b83a1aee05584d88007708ca6b33e15f9f9e1586335affd7ee",
+      "source_sha256": {
+        "student.py": "501b26e1487327f7b5c23be206402f1bfcb5d1b9d814090fb33e1cbc934fa9c2",
+        "hybrid.py": "17c14a19b0f83ad01b951174feb198e0de2efc461316ea32ebf5c4b528974127",
+        "ngram_expert.py": "bdc78822d0f05644b209d5f55e7aac72a8d25df1424f88d067ad7e6df180c9f1",
+        "common.py": "d40dc1fe6578b5993a563bdb4d9e5317ddc9fae8afe48822b66571c7042e84db",
+        "evaluate.py": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+        "model.py": "6cce142a31d396f017319543f50d70f30fa6da740729af01c8baed13c6f671f9"
+      },
+      "benchmark_sha256": {
+        "data/manifest.json": "f4790bb599d9fcd04e48263e685335e2f62d9bca0324b08061a10c38984f4fe4",
+        "data/tokenizer.json": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+        "data/wikitext_train.txt": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+        "data/wikitext_validation.txt": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+        "data/wikitext_test.txt": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc"
+      },
+      "end_snapshot": {
+        "checkpoint_sha256": "0ccd91e76520f7b83a1aee05584d88007708ca6b33e15f9f9e1586335affd7ee",
+        "source_sha256": {
+          "student.py": "501b26e1487327f7b5c23be206402f1bfcb5d1b9d814090fb33e1cbc934fa9c2",
+          "hybrid.py": "17c14a19b0f83ad01b951174feb198e0de2efc461316ea32ebf5c4b528974127",
+          "ngram_expert.py": "bdc78822d0f05644b209d5f55e7aac72a8d25df1424f88d067ad7e6df180c9f1",
+          "common.py": "d40dc1fe6578b5993a563bdb4d9e5317ddc9fae8afe48822b66571c7042e84db",
+          "evaluate.py": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+          "model.py": "6cce142a31d396f017319543f50d70f30fa6da740729af01c8baed13c6f671f9"
+        },
+        "benchmark_sha256": {
+          "data/manifest.json": "f4790bb599d9fcd04e48263e685335e2f62d9bca0324b08061a10c38984f4fe4",
+          "data/tokenizer.json": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+          "data/wikitext_train.txt": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+          "data/wikitext_validation.txt": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+          "data/wikitext_test.txt": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc"
+        }
+      },
+      "measurement_source_sha256": {
+        "measure_evaluation.py": "dbd79dbe6c29c2436cb26ca2a09d9bf1057a078df427f1ea27626d649d97201a",
+        "evidence.py": "861aba6c57ee444c975991dafd4049da03745d286cd6b9f05919069077cc25ba"
+      },
+      "psutil_version": "7.2.2",
+      "sample_interval_seconds": 0.02,
+      "memory_method": "Entire evaluation process tree; per-process OS lifetime peaks when available, plus sampled concurrent RSS",
+      "memory_polling_limitations": "20 ms snapshots may miss short-lived descendants. OS lifetime peaks are retained for observed processes when available. The sum of individual peaks may exceed the simultaneous peak.",
+      "process_peaks": [
+        {
+          "pid": 9780,
+          "name": "python.exe",
+          "peak_rss_bytes": 4648960,
+          "peak_private_commit_bytes": 802816
+        },
+        {
+          "pid": 29156,
+          "name": "python.exe",
+          "peak_rss_bytes": 1791877120,
+          "peak_private_commit_bytes": 2429706240
+        }
+      ],
+      "score_output": "E:\\Edge\\mp1\\measure\\session-1\\repeat2_candidate.score.json",
+      "score": {
+        "bpb": 1.415455287338549,
+        "token_ppl": 19.901545023254567,
+        "nll_nats": 1126331.2980201265,
+        "targets": 376599,
+        "utf8_bytes": 1148007,
+        "seconds": 23.17403199999535,
+        "protocol": "7506-mp1-wt2-v2",
+        "split": "validation",
+        "precision": "fp32",
+        "checkpoint_sha256": "0ccd91e76520f7b83a1aee05584d88007708ca6b33e15f9f9e1586335affd7ee",
+        "implementation_sha256": "17c14a19b0f83ad01b951174feb198e0de2efc461316ea32ebf5c4b528974127",
+        "evaluator_sha256": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+        "tokenizer_sha256": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+        "device": "cpu",
+        "device_name": "CPU",
+        "peak_allocated_gb": 0.0,
+        "peak_reserved_gb": 0.0
+      }
+    },
+    {
+      "protocol": "7506-mp1-wt2-v2",
+      "command": [
+        "E:\\Edge\\mp1\\py\\Scripts\\python.exe",
+        "E:\\Edge\\mp1\\release\\evaluate.py",
+        "--checkpoint",
+        "E:\\Edge\\mp1\\work\\candidate\\checkpoint.pt",
+        "--split",
+        "validation",
+        "--device",
+        "cpu",
+        "--precision",
+        "fp32",
+        "--threads",
+        "4",
+        "--output",
+        "E:\\Edge\\mp1\\measure\\session-1\\repeat3_candidate.score.json"
+      ],
+      "return_code": 0,
+      "wall_seconds": 30.892610599999898,
+      "peak_rss_bytes": 1795571712,
+      "peak_private_commit_bytes": 2429976576,
+      "ram_limit_bytes": 4294967296,
+      "peak_concurrent_rss_bytes": 1778016256,
+      "peak_concurrent_private_commit_bytes": 2429964288,
+      "sum_observed_process_rss_peaks_bytes": 1795571712,
+      "sum_observed_process_commit_peaks_bytes": 2429976576,
+      "ram_within_limit": true,
+      "memory_measurement_valid": true,
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "machine": "AMD64",
+      "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+      "python_executable": "E:\\Edge\\mp1\\py\\Scripts\\python.exe",
+      "torch_version": "2.7.1+cpu",
+      "threads": 4,
+      "source_stability_verified": true,
+      "checkpoint_sha256": "0ccd91e76520f7b83a1aee05584d88007708ca6b33e15f9f9e1586335affd7ee",
+      "source_sha256": {
+        "student.py": "501b26e1487327f7b5c23be206402f1bfcb5d1b9d814090fb33e1cbc934fa9c2",
+        "hybrid.py": "17c14a19b0f83ad01b951174feb198e0de2efc461316ea32ebf5c4b528974127",
+        "ngram_expert.py": "bdc78822d0f05644b209d5f55e7aac72a8d25df1424f88d067ad7e6df180c9f1",
+        "common.py": "d40dc1fe6578b5993a563bdb4d9e5317ddc9fae8afe48822b66571c7042e84db",
+        "evaluate.py": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+        "model.py": "6cce142a31d396f017319543f50d70f30fa6da740729af01c8baed13c6f671f9"
+      },
+      "benchmark_sha256": {
+        "data/manifest.json": "f4790bb599d9fcd04e48263e685335e2f62d9bca0324b08061a10c38984f4fe4",
+        "data/tokenizer.json": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+        "data/wikitext_train.txt": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+        "data/wikitext_validation.txt": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+        "data/wikitext_test.txt": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc"
+      },
+      "end_snapshot": {
+        "checkpoint_sha256": "0ccd91e76520f7b83a1aee05584d88007708ca6b33e15f9f9e1586335affd7ee",
+        "source_sha256": {
+          "student.py": "501b26e1487327f7b5c23be206402f1bfcb5d1b9d814090fb33e1cbc934fa9c2",
+          "hybrid.py": "17c14a19b0f83ad01b951174feb198e0de2efc461316ea32ebf5c4b528974127",
+          "ngram_expert.py": "bdc78822d0f05644b209d5f55e7aac72a8d25df1424f88d067ad7e6df180c9f1",
+          "common.py": "d40dc1fe6578b5993a563bdb4d9e5317ddc9fae8afe48822b66571c7042e84db",
+          "evaluate.py": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+          "model.py": "6cce142a31d396f017319543f50d70f30fa6da740729af01c8baed13c6f671f9"
+        },
+        "benchmark_sha256": {
+          "data/manifest.json": "f4790bb599d9fcd04e48263e685335e2f62d9bca0324b08061a10c38984f4fe4",
+          "data/tokenizer.json": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+          "data/wikitext_train.txt": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+          "data/wikitext_validation.txt": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+          "data/wikitext_test.txt": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc"
+        }
+      },
+      "measurement_source_sha256": {
+        "measure_evaluation.py": "dbd79dbe6c29c2436cb26ca2a09d9bf1057a078df427f1ea27626d649d97201a",
+        "evidence.py": "861aba6c57ee444c975991dafd4049da03745d286cd6b9f05919069077cc25ba"
+      },
+      "psutil_version": "7.2.2",
+      "sample_interval_seconds": 0.02,
+      "memory_method": "Entire evaluation process tree; per-process OS lifetime peaks when available, plus sampled concurrent RSS",
+      "memory_polling_limitations": "20 ms snapshots may miss short-lived descendants. OS lifetime peaks are retained for observed processes when available. The sum of individual peaks may exceed the simultaneous peak.",
+      "process_peaks": [
+        {
+          "pid": 18284,
+          "name": "python.exe",
+          "peak_rss_bytes": 4448256,
+          "peak_private_commit_bytes": 815104
+        },
+        {
+          "pid": 21408,
+          "name": "python.exe",
+          "peak_rss_bytes": 1791123456,
+          "peak_private_commit_bytes": 2429161472
+        }
+      ],
+      "score_output": "E:\\Edge\\mp1\\measure\\session-1\\repeat3_candidate.score.json",
+      "score": {
+        "bpb": 1.415455287338549,
+        "token_ppl": 19.901545023254567,
+        "nll_nats": 1126331.2980201265,
+        "targets": 376599,
+        "utf8_bytes": 1148007,
+        "seconds": 23.084964300011052,
+        "protocol": "7506-mp1-wt2-v2",
+        "split": "validation",
+        "precision": "fp32",
+        "checkpoint_sha256": "0ccd91e76520f7b83a1aee05584d88007708ca6b33e15f9f9e1586335affd7ee",
+        "implementation_sha256": "17c14a19b0f83ad01b951174feb198e0de2efc461316ea32ebf5c4b528974127",
+        "evaluator_sha256": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+        "tokenizer_sha256": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+        "device": "cpu",
+        "device_name": "CPU",
+        "peak_allocated_gb": 0.0,
+        "peak_reserved_gb": 0.0
+      }
+    }
+  ],
+  "created_at_utc": "2026-09-28T05:23:19.618740+00:00",
+  "record_files": [
+    {
+      "path": "E:\\Edge\\mp1\\measure\\session-1\\repeat1_baseline.json",
+      "sha256": "c7c80ec12e1c7abc123545844b92c5201c903ececa3667c388e5ec2979e7f709"
+    },
+    {
+      "path": "E:\\Edge\\mp1\\measure\\session-1\\repeat2_baseline.json",
+      "sha256": "cf77febfd5c8abf16f94e2126a44d656230f9521182c571ecdb18b97eddc9805"
+    },
+    {
+      "path": "E:\\Edge\\mp1\\measure\\session-1\\repeat3_baseline.json",
+      "sha256": "b8fc7fbb369a572aeff2b8fe7cdbb72e74d3ffd4b8e72d84904fc5740b16ee93"
+    },
+    {
+      "path": "E:\\Edge\\mp1\\measure\\session-1\\repeat1_candidate.json",
+      "sha256": "507d3c86200755d8ab0d2476f93ba01ca60a95d6774d9392c70e8708ed892c81"
+    },
+    {
+      "path": "E:\\Edge\\mp1\\measure\\session-1\\repeat2_candidate.json",
+      "sha256": "087136322b78397a6ce61964c7073d25f2e4750755096f21cecd5d46938e3162"
+    },
+    {
+      "path": "E:\\Edge\\mp1\\measure\\session-1\\repeat3_candidate.json",
+      "sha256": "1ed99821996b096330d1b3163ae3e33728a0404510c8d5946c556db47c701f38"
+    }
+  ],
+  "summarizer_sha256": "d237faa01f7334989c85f7b677368226bec945563ce70b151ec91e924ee6dd46"
+}

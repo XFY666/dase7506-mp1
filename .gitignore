@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+runs/
+*.pt
+# outputs of the verification and timing commands in README.md
+reproduced-test.json
+reproduced-test.window-nll.npy
+m/

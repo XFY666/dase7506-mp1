@@ -1,0 +1,4 @@
+# Keep every file byte-exact on checkout. Source, data and evidence files are
+# verified by SHA-256 (verify_integrity.py, verify_frozen.py), so no line-ending
+# conversion may be applied on any platform.
+* -text

@@ -1,0 +1,137 @@
+{
+  "protocol": "7506-mp1-wt2-v2",
+  "frozen_at_utc": "2026-09-28T05:26:34.096451+00:00",
+  "selection_split": "validation",
+  "test_evaluated_at_freeze": false,
+  "parent_checkpoint_sha256": "0ccd91e76520f7b83a1aee05584d88007708ca6b33e15f9f9e1586335affd7ee",
+  "implementation": "hybrid",
+  "config": {
+    "vocab": 2048,
+    "context": 256,
+    "width": 256,
+    "heads": 4,
+    "depth": 8,
+    "dropout": 0.1,
+    "attention_dropout": 0.0,
+    "embedding_dropout": 0.1,
+    "norm": "rms",
+    "mlp_hidden": 704,
+    "cache_weight": 0.15,
+    "logit_temperature": 1.05,
+    "cache_min_similarity": 0.7,
+    "ngram_weight": 0.05,
+    "cache_layer": -1,
+    "ngram_confidence_power": 0.0,
+    "ngram_early_weight": 0.1,
+    "ngram_early_tokens": 64,
+    "ngram_asset": "assets/ngram_mkn5.npz",
+    "ngram_sha256": "1335f14916300c1f6cbe7dd81de561e0d5a860e7bdb89b697271e579273ca843",
+    "cache_temperature": 12.0,
+    "cache_decay": 0.0,
+    "cache_min_history": 32,
+    "cpu_batch_chunk": 4,
+    "cpu_trunk_chunk": 8,
+    "cpu_restructure_counts": true
+  },
+  "inference_source_sha256": {
+    "student.py": "501b26e1487327f7b5c23be206402f1bfcb5d1b9d814090fb33e1cbc934fa9c2",
+    "hybrid.py": "17c14a19b0f83ad01b951174feb198e0de2efc461316ea32ebf5c4b528974127",
+    "ngram_expert.py": "bdc78822d0f05644b209d5f55e7aac72a8d25df1424f88d067ad7e6df180c9f1",
+    "common.py": "d40dc1fe6578b5993a563bdb4d9e5317ddc9fae8afe48822b66571c7042e84db",
+    "evaluate.py": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+    "model.py": "6cce142a31d396f017319543f50d70f30fa6da740729af01c8baed13c6f671f9"
+  },
+  "benchmark_sha256": {
+    "data/manifest.json": "f4790bb599d9fcd04e48263e685335e2f62d9bca0324b08061a10c38984f4fe4",
+    "data/tokenizer.json": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+    "data/wikitext_train.txt": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+    "data/wikitext_validation.txt": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307",
+    "data/wikitext_test.txt": "aca2f46735043bcfd0a44eca981d04627b9cdf74c4c9a04bf0856d04066f58fc"
+  },
+  "freeze_tool_sha256": {
+    "freeze_candidate.py": "1ea497be06ea32b63dffd3554a6bd877a24fd712d7d9b73d3e4c70229e6f58e0",
+    "verify_frozen.py": "e1168d3c8f1b08bb175c364587a90a8b7cb48688fcdee47f2b7d520d78e5bb62",
+    "evidence.py": "861aba6c57ee444c975991dafd4049da03745d286cd6b9f05919069077cc25ba",
+    "summarize_resources.py": "d237faa01f7334989c85f7b677368226bec945563ce70b151ec91e924ee6dd46",
+    "measure_evaluation.py": "dbd79dbe6c29c2436cb26ca2a09d9bf1057a078df427f1ea27626d649d97201a"
+  },
+  "evidence": [
+    {
+      "path": "checkpoints/final/validation_evidence.json",
+      "sha256": "7a3c4a2e48de83fd39a43d3df9a51e2e0383bf8fe88e942b2760a93e7925a57b"
+    },
+    {
+      "path": "checkpoints/final/resource_evidence.json",
+      "sha256": "bc1ea02ac954e4ee52b2bebb7fd06a4d2e74e91e2307dd545f6f559d9f295e84"
+    }
+  ],
+  "assets": [
+    {
+      "path": "checkpoints/final/checkpoint.pt",
+      "file_bytes": 27821877,
+      "archive_member_bytes": 27811109,
+      "counted_uncompressed_bytes": 27821877,
+      "sha256": "0ccd91e76520f7b83a1aee05584d88007708ca6b33e15f9f9e1586335affd7ee"
+    },
+    {
+      "path": "assets/ngram_mkn5.npz",
+      "file_bytes": 18689724,
+      "archive_member_bytes": 18687624,
+      "counted_uncompressed_bytes": 18689724,
+      "sha256": "1335f14916300c1f6cbe7dd81de561e0d5a860e7bdb89b697271e579273ca843"
+    },
+    {
+      "path": "student.py",
+      "file_bytes": 11260,
+      "archive_member_bytes": 11260,
+      "counted_uncompressed_bytes": 11260,
+      "sha256": "501b26e1487327f7b5c23be206402f1bfcb5d1b9d814090fb33e1cbc934fa9c2"
+    },
+    {
+      "path": "hybrid.py",
+      "file_bytes": 11539,
+      "archive_member_bytes": 11539,
+      "counted_uncompressed_bytes": 11539,
+      "sha256": "17c14a19b0f83ad01b951174feb198e0de2efc461316ea32ebf5c4b528974127"
+    },
+    {
+      "path": "ngram_expert.py",
+      "file_bytes": 5471,
+      "archive_member_bytes": 5471,
+      "counted_uncompressed_bytes": 5471,
+      "sha256": "bdc78822d0f05644b209d5f55e7aac72a8d25df1424f88d067ad7e6df180c9f1"
+    },
+    {
+      "path": "common.py",
+      "file_bytes": 3302,
+      "archive_member_bytes": 3302,
+      "counted_uncompressed_bytes": 3302,
+      "sha256": "d40dc1fe6578b5993a563bdb4d9e5317ddc9fae8afe48822b66571c7042e84db"
+    },
+    {
+      "path": "evaluate.py",
+      "file_bytes": 3437,
+      "archive_member_bytes": 3437,
+      "counted_uncompressed_bytes": 3437,
+      "sha256": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d"
+    },
+    {
+      "path": "model.py",
+      "file_bytes": 2771,
+      "archive_member_bytes": 2771,
+      "counted_uncompressed_bytes": 2771,
+      "sha256": "6cce142a31d396f017319543f50d70f30fa6da740729af01c8baed13c6f671f9"
+    }
+  ],
+  "inference_assets_uncompressed_bytes": 46549381,
+  "inference_asset_limit_bytes": 67108864,
+  "validation_evidence_sha256": "7a3c4a2e48de83fd39a43d3df9a51e2e0383bf8fe88e942b2760a93e7925a57b",
+  "resource_evidence_sha256": "bc1ea02ac954e4ee52b2bebb7fd06a4d2e74e91e2307dd545f6f559d9f295e84",
+  "cpu_median_time_ratio": 4.2552060503538565,
+  "peak_rss_bytes": 1796526080,
+  "parameter_weights_changed": false,
+  "checkpoint_bytes_changed": false,
+  "scheduling_changed": false,
+  "cpu_batch_chunk": 4,
+  "rule": "No predictor, asset or setting changes after reading test results."
+}
