@@ -178,9 +178,11 @@ Limitations: every comparison uses one seed, and the validation split was reused
 
 The course supplied the baseline, trainer, scorer, tokenizer, data and contract tests. No external text or pretrained weights were used. WikiText-2 is by Merity et al. [1], with text by Wikipedia contributors under CC BY-SA 3.0 and GFDL.
 
-I set the project objectives and resource priorities, requested independent technical review, and approved key decisions, including accepting the delayed resource sessions before testing and proceeding to the final freeze. My learning goal is to understand how distillation, causal caching and count-based prediction interact under a fixed inference budget, including the trade-offs and limitations revealed by the experiments.
+AI tools were used for technical explanations and substantive implementation assistance with the more demanding components, including teacher-student distillation, the similarity-gated causal cache, and the Kneser-Ney count model. Specific support included translating these methods into code, optimizing CPU inference, and checking causality and probability normalization.
 
-OpenAI Codex and Anthropic Claude provided substantial assistance with technical explanations, model and tooling implementation, experimental suggestions and execution, debugging, verification, and documentation. Codex handled much of the implementation and training; Claude supplied a second review and completed the final measurements, freeze, test and release preparation. Code cleanup and the detailed correctness and provenance checks were also AI-assisted. I retain responsibility for the submission and for explaining its claims and limitations. README Section 9 describes the division of work.
+AI assistance also covered training and evaluation tooling, experiment execution, debugging, and code review.
+
+The README and report were drafted and summarized with AI assistance from the implementation and recorded experimental results, including organizing method descriptions, experiment tables, and discussions of results and limitations.
 
 ## References
 
