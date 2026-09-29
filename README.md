@@ -180,14 +180,17 @@ One deviation from our own plan: it set an internal deadline of 08:30 (UTC+8, 28
 
 Checkpoints store build metadata, including the author's local file paths, for provenance. This metadata is not used at inference.
 
-## 9. Use of AI assistants
+## 9. My role, learning goals and AI assistance
 
-As the course permits, this project used two AI assistants substantially.
+**My role and learning goals.** I set the project's goal of improving BPB within the course constraints, allocated local computing resources, and requested independent review of the implementation and experimental choices. I directed the collaboration between the two assistants and approved key decisions, including accepting the delayed resource sessions before testing and proceeding to the final freeze. My interest in the project extends beyond the score: I want to understand how distillation, causal caching and training-derived counts interact, and why a lower validation loss must be considered alongside computational cost and reproducibility.
 
-- **OpenAI Codex** wrote most of the code, ran the training runs and experiments, and drafted earlier versions of the report.
-- **Anthropic Claude** reviewed Codex's code and results, proposed experiments (for example the teacher-B mixture and the longer 32k schedule) and wrote prototypes of the CPU scheduling change. After Codex's usage quota ran out, Claude ran the final model's resource sessions, qualification check, freeze and test campaign. It also assembled this repository, this README and the report.
+**Scope of assistance.** As permitted by the course, I used OpenAI Codex and Anthropic Claude substantially for technical explanations, implementation, experiments and documentation:
 
-I directed the work and made the key decisions: the 4.8× resource margin, the choice of the final model (including accepting its late resource sessions), and approving the freeze and the single test run. I am responsible for this submission.
+- Codex implemented much of the model and experimental tooling, executed training and validation experiments, and prepared initial documentation.
+- Claude provided a second technical review, suggested experiments, contributed CPU scheduling prototypes, and completed the final measurement, freezing, testing and repository preparation.
+- Their assistance also covered debugging, correctness tests, provenance and hash checks, code cleanup, and editing the README and report. These checks explain the detailed verification tooling in the repository; they were developed with AI assistance.
+
+The responsibilities above distinguish my project direction and decisions from the assistants' implementation and execution. I am responsible for the submitted work, for checking its claims and for being able to explain the method and its limitations.
 
 ## 10. Credits and data
 

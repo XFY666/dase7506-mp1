@@ -178,7 +178,9 @@ Limitations: every comparison uses one seed, and the validation split was reused
 
 The course supplied the baseline, trainer, scorer, tokenizer, data and contract tests. No external text or pretrained weights were used. WikiText-2 is by Merity et al. [1], with text by Wikipedia contributors under CC BY-SA 3.0 and GFDL.
 
-AI assistants (OpenAI Codex and Anthropic Claude) were used substantially. They wrote most of the code, proposed and ran experiments, ran the final measurements, freeze and test, and drafted this report. I directed the work and made the key decisions. Section 9 of the repository README gives the details.
+I set the project objectives and resource priorities, requested independent technical review, and approved key decisions, including accepting the delayed resource sessions before testing and proceeding to the final freeze. My learning goal is to understand how distillation, causal caching and count-based prediction interact under a fixed inference budget, including the trade-offs and limitations revealed by the experiments.
+
+OpenAI Codex and Anthropic Claude provided substantial assistance with technical explanations, model and tooling implementation, experimental suggestions and execution, debugging, verification, and documentation. Codex handled much of the implementation and training; Claude supplied a second review and completed the final measurements, freeze, test and release preparation. Code cleanup and the detailed correctness and provenance checks were also AI-assisted. I retain responsibility for the submission and for explaining its claims and limitations. README Section 9 describes the division of work.
 
 ## References
 
@@ -197,4 +199,3 @@ AI assistants (OpenAI Codex and Anthropic Claude) were used substantially. They 
 [7] P. Izmailov et al. Averaging Weights Leads to Wider Optima and Better Generalization. UAI, 2018.
 
 [8] G. Hinton, O. Vinyals, J. Dean. Distilling the Knowledge in a Neural Network. arXiv:1503.02531, 2015.
-
